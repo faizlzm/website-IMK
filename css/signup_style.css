@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #243763;
+    --secondary-color: #ff6e31;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px;
+    background-color: var(--primary-color);
+}
+
+.container{
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: white;
+}
+
+.login-left{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.login-left img{
+    width: 85%;
+}
+
+.login-header{
+    margin-bottom: 40px;
+}
+
+.login-header h1{
+    font-size: 40px;
+}
+
+.login-form{
+    width: 450px;
+}
+
+.login-form-content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.login-form-footer{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.login-form-daftar{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    font-size: .8rem;
+}
+
+.login-form-daftar a{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.form-item label:not(.checkboxLabel){
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px, -10px);
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"]{
+    border: 1px solid black;
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.login-form-footer a{
+    flex: 6;
+    gap: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .6rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.login-form-footer a:hover{
+    background-color: #eeee;
+}
+
+button{
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+}
+
+@media (max-width: 1350px){
+    .container{
+        grid-template-columns: 1fr; /* Ubah grid-template-columns ke 1 kolom saat lebar kurang dari 1350px */
+    }
+
+    .login-right{
+        padding: 50px; /* Atur padding untuk elemen .login-left agar lebih sesuai pada layar yang lebih kecil */
+    }
+
+    .login-form{
+        width: 100%;
+    }
+
+    .login-form-footer{
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px; /* Sesuaikan margin-top agar lebih sesuai pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 20px;
+    }
+
+    .container{
+        grid-template-columns: 1fr; /* Ubah grid-template-columns ke 1 kolom saat lebar kurang dari 768px */
+    }
+
+    .login-left{
+        display: none;
+    }
+}
