@@ -1,6 +1,6 @@
 document.querySelector('.login-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    window.location.href = '../dashboard.html';
+    window.location.href = '../dashboard/dashboard.html';
 });
 
 document.querySelector('.login-form').addEventListener('submit', function(event) {
