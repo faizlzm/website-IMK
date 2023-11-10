@@ -72,22 +72,53 @@
     <!-- Navbar end -->
     <main>
       <div class="profile">
-        <div class="pemberitahuan">
-          <img class="pemberitahuan" src="../img/bell.svg" />
+        <div class="notif_icon">
+          <img class="notif" src="../img/bell.svg"/>
         </div>
-        <div class="avatar_wrapper">
-          <img class="avatar" src="../img/foto-diri.png" alt="Profile" />
-          <div class="online_status"></div>
+        <div class="avatar_icon">
+          <img class="avatar" src="../img/foto-diri.png"/>
         </div>
       </div>
 
-      <div class="content">
-        <div class="sambutan">
+      <div class="content-satu">
+        <div class="header">
           <h1>Hello, Nama Penghuni Kost</h1>
           <p>Selamat datang kembali!</p>
         </div>
         <img src="../img/dashboard_6188222.png" alt="" />
       </div>
+
+      <div class="content-dua">
+        <div class="calendar">
+          <div class="header">
+            <div class="month"></div>
+            <div class="btns">
+              <div class="btn today-btn">
+                <img src="/img/calendar.svg" class="fas fa-calendar-day"></img>
+              </div>
+              <div class="btn prev-btn">
+                <img src="/img/chevron-left.svg" class="fas fa-chevron-left"></img>
+              </div>
+              <div class="btn next-btn">
+                <img src="/img/chevron-right.svg" class="fas fa-chevron-right"></img>
+              </div>
+            </div>
+          </div>
+          <div class="weekdays">
+            <div class="day">Min</div>
+            <div class="day">Sen</div>
+            <div class="day">Sel</div>
+            <div class="day">Rab</div>
+            <div class="day">Kam</div>
+            <div class="day">Jum</div>
+            <div class="day">Sab</div>
+          </div>
+          <div class="days">
+            <!-- lets add days using js -->
+          </div>
+        </div>
+      </div>
+      
     </main>
     <script src="dashboard_script.js"></script>
   </body>
