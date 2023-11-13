@@ -94,7 +94,7 @@
         <div class="row">
             <label for="jenis_galon">Pilih jenis galon</label>
             <select class="jenis_galon" name="jenis_galon" id="jenis_galon">
-                <option value="Pilih">Pilih</option>
+                <option value="" selected disabled>Pilih jenis galon</option>
                 <option value="Aqua">Aqua</option>
                 <option value="Cleo">Cleo</option>
                 <option value="Le Minerale">Le Minerale</option>
@@ -104,14 +104,36 @@
         <div class="row">
             <label for="jumlah_galon">Pilih jumlah galon</label>
             <select class="jumlah_galon" name="jumlah_galon" id="jumlah_galon">
-                <option value="Pilih">Pilih</option>
+                <option value="" selected disabled>Pilih jumlah galon</option>
                 <option value="1">1 Galon</option>
                 <option value="2">2 Galon</option>
                 <option value="3">3 Galon</option>
             </select>
         </div>
+        <button id="pesanButton">Pesan</button>
+      </div>
 
-        <button>Submit</button>
+      <div class="pilihan_laundry" style="display: none;">
+        <div class="row">
+          <label for="berapa_hari">Pilih berapa hari</label>
+          <select class="berapa_hari" name="berapa_hari" id="berapa_hari">
+              <option value="" selected disabled>Pilih berapa hari</option>
+              <option value="1">1 Hari</option>
+              <option value="2">2 Hari</option>
+              <option value="3">3 Hari</option>
+          </select>
+        </div>
+        
+        <div class="row">
+          <label for="jenis_layanan_laundry">Jenis Layanan</label>
+          <select class="jenis_layanan_laundry" name="jenis_layanan_laundry" id="jenis_layanan_laundry">
+              <option value="" selected disabled>Pilih Jenis Layanan</option>
+              <option value="Cuci Kering Lipat">Cuci Kering Lipat</option>
+              <option value="Cuci Setrika">Cuci Setrika</option>
+          </select>
+        </div>
+        <button id="pesanButton">Pesan</button>
+      </div>
     </div>
 
     
