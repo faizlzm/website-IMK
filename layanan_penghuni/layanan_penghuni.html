@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Kost Zupazu</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="layanan_penghuni_style.css" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav>
+      <div class="sidebar">
+        <a href="#" class="logo">
+          <img src="../img/slack.svg" alt="LogoIcon" class="logoIcon" />
+          <h1 class="hide">Kost <span>Zupazu</span></h1>
+        </a>
+        <div class="expand-btn">
+          <img src="../img/chevron.svg" alt="Chevron" />
+        </div>
+      </div>
+      <div class="sidebar-links">
+        <ul>
+          <li>
+            <a href="#Beranda" title="Beranda" class="tooltip">
+              <img src="../img/home.svg" alt="Beranda" />
+              <span class="link hide">Beranda</span>
+              <span class="tooltip_content">Beranda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#obrolan" title="Obrolan" class="tooltip">
+              <img src="../img/message-circle.svg" alt="Obrolan" />
+              <span class="link hide">Obrolan</span>
+              <span class="tooltip_content">Obrolan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#riwayatTransaksi" title="RiwayatTransakasi" class="tooltip">
+              <img src="../img/performance.svg" alt="riwayatTransakasi" />
+              <span class="link hide">Riwayat Transakasi</span>
+              <span class="tooltip_content">Riwayat Transakasi</span>
+            </a>
+          </li>
+          <li>
+            <a href="#forum" title="Forum" class="tooltip">
+              <img src="../img/funds.svg" alt="Forum" />
+              <span class="link hide">Forum</span>
+              <span class="tooltip_content">Forum</span>
+            </a>
+          </li>
+          <li>
+            <a href="#layananLuarKost" title="LayananLuarKost" class="tooltip">
+              <img src="../img/globe.svg" alt="LayananLuarKost" />
+              <span class="link hide">Layanan Luar Kost</span>
+              <span class="tooltip_content">Layanan Luar Kost</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+    <main>
+      <div class="profile">
+        <div class="notif_icon">
+          <img class="notif" src="../img/bell.svg"/>
+        </div>
+        <div class="avatar_icon">
+          <img class="avatar" src="../img/foto-diri.png"/>
+        </div>
+      </div>
+      <div class="header">
+        <h1>Pelayanan Luar Kos</h1>
+      </div>
+      <div class="pilihan_layanan">
+        <label for="pilihan"></label>
+        <select class="jenis_layanan" name="jenis_layanan" id="jenis_layanan">
+          <option value="" selected disabled>Pilih jenis layanan</option>
+          <option value="Pesanan Galon">Pesanan Galon</option>
+          <option value="Pesanan Laundry">Pesanan Laundry</option>
+        </select>
+      </div>
+      <div class="pilihan_galon_jumlah" style="display: none;">
+        <div class="row">
+            <label for="jenis_galon">Pilih jenis galon</label>
+            <select class="jenis_galon" name="jenis_galon" id="jenis_galon">
+                <option value="Pilih">Pilih</option>
+                <option value="Aqua">Aqua</option>
+                <option value="Cleo">Cleo</option>
+                <option value="Le Minerale">Le Minerale</option>
+            </select>
+        </div>
+    
+        <div class="row">
+            <label for="jumlah_galon">Pilih jumlah galon</label>
+            <select class="jumlah_galon" name="jumlah_galon" id="jumlah_galon">
+                <option value="Pilih">Pilih</option>
+                <option value="1">1 Galon</option>
+                <option value="2">2 Galon</option>
+                <option value="3">3 Galon</option>
+            </select>
+        </div>
+
+        <button>Submit</button>
+    </div>
+
+    
+    </main>
+    <script src="layanan_penghuni_script.js"></script>
+  </body>
+</html>
