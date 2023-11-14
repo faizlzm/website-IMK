@@ -256,7 +256,6 @@ select:focus {
 }
 
 .pilihan_galon_jumlah {
-  display: none;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -270,7 +269,6 @@ select:focus {
 }
 
 .pilihan_laundry {
-  display: none;
   display: flex;
   flex-direction: column;
   gap: 30px;
