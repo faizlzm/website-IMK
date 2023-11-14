@@ -246,9 +246,8 @@ select:focus {
 
 .jenis_layanan {
   margin-top: 18px;
-  width: 811px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin: 5% 20%;
   display: flex;
 }
 
@@ -257,14 +256,13 @@ select:focus {
 }
 
 .pilihan_galon_jumlah {
+  display: none;
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: center;
   background-color: var(--sidebar-text);
-  /* margin-top: 40px; */
   justify-self: center;
-  display: flex;
   padding-bottom: 20px;
   padding-left: 20%;
   padding-right: 20%;
@@ -272,6 +270,7 @@ select:focus {
 }
 
 .pilihan_laundry {
+  display: none;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -301,11 +300,11 @@ select:focus {
 }
 
 .jumlah_galon{
-  width: 200px;
+  width: 100%;
 }
 
 .jenis_galon{
-  width: 200px;
+  width: 100%;
 }
 
 button {
@@ -318,7 +317,7 @@ button {
   text-transform: uppercase;
   font-size: 18px;
   height: 50px;
-  width: 840px;
+  width: 100%;
   cursor: pointer;
 }
 
