@@ -28,21 +28,21 @@ allLinks.forEach((elem) => {
 const teamMembers = [
   {
       src: '../img/user.jpg',
-      name: 'James Alexander',
+      name: 'Ahmad Faiz Ali Azmi',
       tagihan: 'Rp. 5.000.000',
       status: 'lunas',
       tanggal: '12 November 2023'
   },
   {
       src: '../img/user.jpg',
-      name: 'Lilia Taylor',
+      name: 'Salsa Zufar Radinka Akmal',
       tagihan: 'Rp. 5.000.000',
       status: 'lunas',
       tanggal: '12 November 2023'
   },
   {
       src: '../img/user.jpg',
-      name: 'Drew Cano',
+      name: 'Muhammad Yasin Hakim',
       tagihan: 'Rp. 5.000.000',
       status: 'belum',
       tanggal: '12 November 2023'
@@ -50,20 +50,20 @@ const teamMembers = [
 
   {
       src: '../img/user.jpg',
-      name: 'Nate Conor',
+      name: 'Fauzan Ghaza Madani',
       tagihan: 'Rp. 5.000.000',
       status: 'belum',
       tanggal: '12 November 2023'
   },
   {
-      name: 'Melissa Brantley',
+      name: 'Ananda Ravi Kuntadi',
       src: '../img/user.jpg',
       tagihan: 'Rp. 5.000.000',
       status: 'lunas',
       tanggal: '12 November 2023'
   },
   {
-      name: 'Anna Smith',
+      name: 'Qyan Rommy Mario',
       src: '../img/user.jpg',
       tagihan: 'Rp. 5.000.000',
       status: 'lunas',
@@ -71,10 +71,38 @@ const teamMembers = [
   },
   {
       src: '../img/user.jpg',
-      name: 'Natalia Alexandra',
+      name: 'Azril Januar Athallah',
       tagihan: 'Rp. 5.000.000',
       status: 'belum',
       tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Haikal Gibran Gunawan',
+    tagihan: 'Rp. 5.000.000',
+    status: 'belum',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Lucas Awan Cahya Buana',
+    tagihan: 'Rp. 5.000.000',
+    status: 'belum',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Jaya Winata',
+    tagihan: 'Rp. 5.000.000',
+    status: 'lunas',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Abyan Rifqi Zainum Muttaqin',
+    tagihan: 'Rp. 5.000.000',
+    status: 'lunas',
+    tanggal: '12 November 2023'
   },
 ];
 

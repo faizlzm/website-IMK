@@ -4,8 +4,8 @@
   --sidebar-text: #f8f7fd;
   --text: #101824;
   --gray: #8f959d;
-  --odd-row: #dde9ff;
-  --gray-background: #EDEEF1;
+  --odd-row: rgb(227, 237, 255);
+  --gray-background: #c9c9c9;
   --gray-mid: #F1F2F6;
 }
 
@@ -160,6 +160,7 @@ body.collapsed .expand-btn img {
   border-radius: 10px;
   outline: none;
   color: var(--sidebar-text);
+  text-decoration: none;
 }
 
 .sidebar-links .active {
@@ -242,30 +243,74 @@ main {
   border-collapse: collapse;
 }
 
-.table caption {
-  font-size: 1.12rem;
-  font-weight: 700;
-  text-align: left;
-  margin: 8px 0px;
+.table .caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.table .sorting{
-  display: flex;
-  gap: 3px;
-  align-items: center;
-  color: #5f97ff;
-  font-weight: lighter;
-  border: 2px solid #5f97ff;
+.search {
+  position: relative;
+  width: 50px;
+  height: 35px;
+  border-radius: 40px;
+  padding: 10px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  font-size: 15px;
+  color: transparent;
+  border: 1px solid #5f97ff;
+  transition: width 300ms, background-position 300ms;
+  overflow: hidden;
+  background: url(../img/search.svg) no-repeat transparent;
+  background-size: 20px;
+  background-position: 45% 50%;
+} 
+
+.search:hover {
+  cursor: pointer;
+  border: 1px solid #5f97ff;
+  background: url(../img/search.svg) no-repeat transparent;
   background-color: var(--odd-row);
+  background-size: 20px;
+  background-position: 45% 50%;
+}
+
+.search:focus, .search:not(:placeholder-shown) {
+  max-width: 300px;
+  width: 20%;
+  cursor: text;
+  color: #5f97ff;
+  padding-left: 60px;
+  outline: none;
+  transition: width 500ms, background-position 300ms;
+  border: 1px solid #5f97ff;
+  background-color: transparent;
+  background: url(../img/search.svg) no-repeat;
+  background-size: 20px;
+  background-position: 10px 50%;
+}
+
+.sorting{
+  display: flex;
+  justify-content: center;
+  flex-wrap: 2fr;
+  width: auto ;
+  color: #5f97ff;
+  border: 1px solid #5f97ff;
   border-radius: 50px;
-  font-size: 13px;
-  width: 10%;
+  font-size: 15px;
   padding: 7px;
   cursor: pointer;
 }
 
-.table .sorting img {
-  width: 15%;
+.sorting:hover {
+  background-color: var(--odd-row);
+}
+
+.sorting p {
+  margin-left: 4px;
 }
 
 .table th {
@@ -297,7 +342,7 @@ main {
 }
 
 .table tbody tr:hover {
-  background-color: #e2ecff;
+  background-color: #bdd4ff;
 }
 
 

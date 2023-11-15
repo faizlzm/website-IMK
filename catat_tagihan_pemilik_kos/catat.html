@@ -32,21 +32,42 @@
       <div class="sidebar-links">
         <ul>
           <li>
-            <a href="#Beranda" title="Beranda" class="tooltip">
+            <a href="../dash_pemilik/dash_pemilik.html" title="Beranda" class="tooltip">
               <img src="../img/home.svg" alt="Beranda" />
               <span class="link hide">Beranda</span>
               <span class="tooltip_content">Beranda</span>
             </a>
           </li>
           <li>
-            <a href="#obrolan" title="Obrolan" class="tooltip">
+            <a href="#pengelolaan_penghuni" title="pengelolaan_penghuni" class="tooltip">
+              <img src="../img/trello.svg" alt="pengelolaan_penghuni" />
+              <span class="link hide">Pengelolaan Penghuni Kost</span>
+              <span class="tooltip_content">Pengelolaan Penghuni Kost</span>
+            </a>
+          </li>
+          <li>
+            <a href="#catat_tagihan" title="catat_tagihan" class="tooltip">
+              <img src="../img/server.svg" alt="catat_tagihan" />
+              <span class="link hide">Catat Tagihan</span>
+              <span class="tooltip_content">Catat Tagihan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#laporan_kinerja_keuangan" title="laporan_kinerja_keuangan" class="tooltip">
+              <img src="../img/funds.svg" alt="laporan_kinerja_keuangan" />
+              <span class="link hide">Laporan Kinerja Keuangan dan Properti</span>
+              <span class="tooltip_content">Catat Tagihan</span>
+            </a>
+          </li>
+          <li>
+            <a href="../obrolan/obrolan.html" title="Obrolan" class="tooltip">
               <img src="../img/message-circle.svg" alt="Obrolan" />
               <span class="link hide">Obrolan</span>
               <span class="tooltip_content">Obrolan</span>
             </a>
           </li>
           <li>
-            <a href="#riwayatTransaksi" title="RiwayatTransakasi" class="tooltip">
+            <a href="../riwayat_transaksi_penghuni/riwayatpenghuni.html" title="RiwayatTransakasi" class="tooltip">
               <img src="../img/performance.svg" alt="riwayatTransakasi" />
               <span class="link hide">Riwayat Transakasi</span>
               <span class="tooltip_content">Riwayat Transakasi</span>
@@ -54,13 +75,13 @@
           </li>
           <li>
             <a href="#forum" title="Forum" class="tooltip">
-              <img src="../img/funds.svg" alt="Forum" />
+              <img src="../img/inbox.svg" alt="Forum" />
               <span class="link hide">Forum</span>
               <span class="tooltip_content">Forum</span>
             </a>
           </li>
           <li>
-            <a href="#layananLuarKost" title="LayananLuarKost" class="tooltip">
+            <a href="../layanan_penghuni/" title="LayananLuarKost" class="tooltip">
               <img src="../img/globe.svg" alt="LayananLuarKost" />
               <span class="link hide">Layanan Luar Kost</span>
               <span class="tooltip_content">Layanan Luar Kost</span>
@@ -88,12 +109,18 @@
 
       <div class="table">
         <table>
-          <caption>
+          <div class="caption">
             <div class="sorting">
               <img src="../img/arrow-up.svg">
-              <p>pengurutan</p>
+              <img src="../img/arrow-down.svg">
+              <p>urutkan</p>
             </div>
-          </caption> 
+            <input
+                class="search"
+                placeholder=" "
+                spellcheck="false"
+            >
+          </div>
           <thead>
             <tr>
               <th>Nama</th>
