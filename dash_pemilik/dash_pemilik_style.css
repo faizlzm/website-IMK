@@ -244,11 +244,12 @@ body.collapsed .tooltip:focus .tooltip_content {
 
 /* Kalender */
 .content-dua {
-
+  display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
   background: var(--sidebar-text);
+  padding: 10px 2rem;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -332,4 +333,8 @@ body.collapsed .tooltip:focus .tooltip_content {
 .days .day.next,
 .days .day.prev {
   color: #ccc;
+}
+
+.tabel{
+  background-color: var(--sidebar-text);
 }
