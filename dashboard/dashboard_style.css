@@ -213,7 +213,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   visibility: visible;
 }
 
-.notif {
+.notif, .logout {
   width: 2rem;
   cursor: pointer;
 }
