@@ -156,5 +156,3 @@ for (let i = 0; i < numberOfPages; i++) {
 }
 
 pagination.innerHTML = linkList.join('');
-
-

@@ -35,21 +35,21 @@
       <div class="sidebar-links">
         <ul>
           <li>
-            <a href="#Beranda" title="Beranda" class="tooltip">
+            <a href="../dashboard/dashboard.html" title="Beranda" class="tooltip">
               <img src="../img/home.svg" alt="Beranda" />
               <span class="link hide">Beranda</span>
               <span class="tooltip_content">Beranda</span>
             </a>
           </li>
           <li>
-            <a href="#obrolan" title="Obrolan" class="tooltip">
+            <a href="../obrolan/obrolan.html" title="Obrolan" class="tooltip">
               <img src="../img/message-circle.svg" alt="Obrolan" />
               <span class="link hide">Obrolan</span>
               <span class="tooltip_content">Obrolan</span>
             </a>
           </li>
           <li>
-            <a href="#riwayatTransaksi" title="RiwayatTransakasi" class="tooltip">
+            <a href="../riwayat_transaksi_penghuni/riwayatpenghuni.html" title="RiwayatTransakasi" class="tooltip">
               <img src="../img/performance.svg" alt="riwayatTransakasi" />
               <span class="link hide">Riwayat Transakasi</span>
               <span class="tooltip_content">Riwayat Transakasi</span>
@@ -63,7 +63,7 @@
             </a>
           </li>
           <li>
-            <a href="#layananLuarKost" title="LayananLuarKost" class="tooltip">
+            <a href="../layanan_penghuni/layanan_penghuni.html" title="LayananLuarKost" class="tooltip">
               <img src="../img/globe.svg" alt="LayananLuarKost" />
               <span class="link hide">Layanan Luar Kost</span>
               <span class="tooltip_content">Layanan Luar Kost</span>
@@ -78,6 +78,11 @@
         <div class="notif_icon">
           <img class="notif" src="../img/bell.svg"/>
         </div>
+        <div class="logout_icon">
+          <a href="../login/login.html">
+            <img class="logout" src="../img/log-out.svg"/>
+          </a>
+        </div>
         <div class="avatar_icon">
           <img class="avatar" src="../img/foto-diri.png"/>
         </div>
@@ -88,46 +93,42 @@
           Riwayat Transakasi
         </h1>
       </div>
-
-      <div class="tabel">
-          <table>
+      <div class="table">
+        <table>
+          <div class="caption">
+            <div class="sorting">
+              <img src="../img/arrow-up.svg">
+              <img src="../img/arrow-down.svg">
+              <p>urutkan</p>
+            </div>
+            <input
+                class="search"
+                placeholder=" "
+                spellcheck="false"
+            >
+          </div>
+          <thead>
             <tr>
+              <th>Nomer</th>
               <th>Tanggal</th>
               <th>Jenis Transaksi</th>
               <th>Nominal Transaksi</th>
             </tr>
+          </thead>
+          <tbody id="team-member-rows">
+            <!--? rows are generated -->
+          </tbody>
+          <tfoot>
             <tr>
-              <td>12 Oktober 2023</td>
-              <td>Pembayaran Kos bulan Oktober</td>
-              <td>Rp. 1.000.000</td>
-              
+              <td colspan="4">
+                <ul class="pagination">
+                  <!--? generated pages -->
+                </ul>
+              </td>
             </tr>
-            <tr>
-              <td>16 Oktober 2023</td>
-              <td>Pembayaran Kas bulan Oktober</td>
-              <td>Rp. 10.000</td>
-            </tr>
-            <tr>
-              <td>12 November 2023</td>
-              <td>Pembayaran Kos bulan November</td>
-              <td>Rp. 1.000.000</td>
-            </tr>
-            <tr>
-              <td>21 November 2023</td>
-              <td>Pembayaran Kas bulan November</td>
-              <td>Rp. 10.000</td>
-            </tr>
+          </tfoot>
         </table>
-            
-        
-
-        <h3>
-          
-        </h3>
-
-      
-      </div>
-
+      </div>           
     </main>
     <script src="riwayatpenghuni_script.js"></script>
   </body>

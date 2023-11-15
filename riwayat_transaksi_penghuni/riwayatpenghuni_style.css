@@ -2,6 +2,11 @@
   --primary-color: #243763;
   --secondary-color: #ff6e31;
   --sidebar-text: #f8f7fd;
+  --text: #101824;
+  --gray: #8f959d;
+  --odd-row: rgb(227, 237, 255);
+  --gray-background: #c9c9c9;
+  --gray-mid: #F1F2F6;
 }
 
 html {
@@ -155,6 +160,7 @@ body.collapsed .expand-btn img {
   border-radius: 10px;
   outline: none;
   color: var(--sidebar-text);
+  text-decoration: none;
 }
 
 .sidebar-links .active {
@@ -203,7 +209,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   visibility: visible;
 }
 
-.notif {
+.notif, .logout {
   width: 2rem;
   cursor: pointer;
 }
@@ -223,51 +229,180 @@ main {
   margin-left: 30px;
 }
 
-.tabel{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  background: var(--sidebar-text);
-  padding: 10px 2rem;
-  margin: 10;
-  border-radius: 10px;
+.table {
+  border-radius: 16px;
+  background-color: var(--sidebar-text);
+  padding: 24px;
+  text-align: left;
+  overflow-x: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tabel table {
+.table table {
+  width: 100%;
   border-collapse: collapse;
+}
+
+.table .caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.search {
   position: relative;
-  margin: auto;
-  color: #444;
+  width: 50px;
+  height: 35px;
+  border-radius: 40px;
+  padding: 10px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  font-size: 15px;
+  color: transparent;
+  border: 1px solid #5f97ff;
+  transition: width 300ms, background-position 300ms;
+  overflow: hidden;
+  background: url(../img/search.svg) no-repeat transparent;
+  background-size: 20px;
+  background-position: 45% 50%;
+} 
+
+.search:hover {
+  cursor: pointer;
+  border: 1px solid #5f97ff;
+  background: url(../img/search.svg) no-repeat transparent;
+  background-color: var(--odd-row);
+  background-size: 20px;
+  background-position: 45% 50%;
 }
 
-.tabel table th,
-.tabel table td {
-  border: 1px solid;
-  padding: 7px 17px;
+.search:focus, .search:not(:placeholder-shown) {
+  max-width: 300px;
+  width: 20%;
+  cursor: text;
+  color: #5f97ff;
+  padding-left: 60px;
+  outline: none;
+  transition: width 500ms, background-position 300ms;
+  border: 1px solid #5f97ff;
+  background-color: transparent;
+  background: url(../img/search.svg) no-repeat;
+  background-size: 20px;
+  background-position: 10px 50%;
+}
+
+.sorting{
+  display: flex;
+  justify-content: center;
+  flex-wrap: 2fr;
+  width: auto ;
+  color: #5f97ff;
+  border: 1px solid #5f97ff;
+  border-radius: 50px;
+  font-size: 15px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.sorting:hover {
+  background-color: var(--odd-row);
+}
+
+.sorting p {
+  margin-left: 4px;
+}
+
+.table th {
+  padding: 20px 16px;
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+
+.table thead {
+  border-top: 2px solid var(--gray-background);
+}
+
+.table tfoot {
+  margin-top: 16px;
+  border-top: 2px solid var(--gray-background);
+}
+
+.table td {
+  padding: 8px 16px;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  cursor: pointer;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: var(--odd-row);
+}
+
+.table tbody tr:hover {
+  background-color: #bdd4ff;
 }
 
 
-.tabel table th{
-  background-color: var(--primary-color);
-  color: #fff;
-  border-color: white;
-  text-transform: uppercase;
+.table-row-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: var(--gray-mid);
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 16px;
+  border-radius: 8px;
 }
 
-.tabel table tr:nth-child(even) td {
-  background-color: lightgray;
+.team-member-profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-.tabel table tr:hover td{
-  background-color: #ffffa2;
-  border-color: #ffff0f;
-  transition: all .2s;
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
+.profile-info__name {
+  font-weight: 700;
+  white-space: nowrap;
+}
 
-.tabel table tfoot th{
-  border-right-color: #f8f7fd;
-  font-size: smaller;
-  text-align: left;
+.team-member-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.table {
+  min-height: 80px;
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+}
+
+.pagination a {
+  display: block;
+  color: var(--text);
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.pagination a:hover, a.active{
+  background-color: var(--odd-row);
+  text-decoration: underline;
 }
