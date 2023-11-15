@@ -37,10 +37,12 @@ body{
 .login-left{
     background-color: var(--secondary-color);
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
-.login-left img{
+.login-left a{
+    display: flex;
+    justify-content: center;
     width: 85%;
 }
 
