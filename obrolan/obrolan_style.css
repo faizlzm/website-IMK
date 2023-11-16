@@ -246,6 +246,11 @@ body.collapsed .tooltip:focus .tooltip_content {
   top: 0;
   padding: 10px;
 }
+.content-sidebar-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px;
+}
 .content-sidebar-form {
   position: relative;
   padding: 16px;
