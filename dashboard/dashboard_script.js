@@ -1,52 +1,38 @@
-
-const expand_btn = document.querySelector(".expand-btn");
+const expand_btn = document.querySelector('.expand-btn');
 
 let activeIndex;
 
-expand_btn.addEventListener("click", () => {
-  document.body.classList.toggle("collapsed");
+expand_btn.addEventListener('click', () => {
+  document.body.classList.toggle('collapsed');
 });
 
 const current = window.location.href;
 
-const allLinks = document.querySelectorAll(".sidebar-links a");
+const allLinks = document.querySelectorAll('.sidebar-links a');
 
 allLinks.forEach((elem) => {
-  elem.addEventListener('click', function() {
+  elem.addEventListener('click', function () {
     const hrefLinkClick = elem.href;
 
     allLinks.forEach((link) => {
-      if (link.href == hrefLinkClick){
-        link.classList.add("active");
+      if (link.href == hrefLinkClick) {
+        link.classList.add('active');
       } else {
         link.classList.remove('active');
       }
     });
-  })
+  });
 });
 
-const daysContainer = document.querySelector(".days"),
-  nextBtn = document.querySelector(".next-btn"),
-  prevBtn = document.querySelector(".prev-btn"),
-  month = document.querySelector(".month"),
-  todayBtn = document.querySelector(".today-btn");
+const daysContainer = document.querySelector('.days'),
+  nextBtn = document.querySelector('.next-btn'),
+  prevBtn = document.querySelector('.prev-btn'),
+  month = document.querySelector('.month'),
+  todayBtn = document.querySelector('.today-btn');
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+const months = ['Januari', 'Februari', 'Maret', 'April', 'Mai', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'];
 
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 // get current date
 const date = new Date();
@@ -73,7 +59,7 @@ function renderCalendar() {
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
 
   // update days html
-  let days = "";
+  let days = '';
 
   // prev days html
   for (let x = firstDay.getDay(); x > 0; x--) {
@@ -83,11 +69,7 @@ function renderCalendar() {
   // current month days
   for (let i = 1; i <= lastDayDate; i++) {
     // check if its today then add today class
-    if (
-      i === new Date().getDate() &&
-      currentMonth === new Date().getMonth() &&
-      currentYear === new Date().getFullYear()
-    ) {
+    if (i === new Date().getDate() && currentMonth === new Date().getMonth() && currentYear === new Date().getFullYear()) {
       // if date month year matches add today
       days += `<div class="day today">${i}</div>`;
     } else {
@@ -108,7 +90,7 @@ function renderCalendar() {
 
 renderCalendar();
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener('click', () => {
   // increase current month by one
   currentMonth++;
   if (currentMonth > 11) {
@@ -121,7 +103,7 @@ nextBtn.addEventListener("click", () => {
 });
 
 // prev monyh btn
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener('click', () => {
   // increase by one
   currentMonth--;
   // check if let than 0 then make it 11 and deacrease year
@@ -133,7 +115,7 @@ prevBtn.addEventListener("click", () => {
 });
 
 // go to today
-todayBtn.addEventListener("click", () => {
+todayBtn.addEventListener('click', () => {
   // set month and year to current
   currentMonth = date.getMonth();
   currentYear = date.getFullYear();
@@ -144,12 +126,9 @@ todayBtn.addEventListener("click", () => {
 // lets hide today btn if its already current month and vice versa
 
 function hideTodayBtn() {
-  if (
-    currentMonth === new Date().getMonth() &&
-    currentYear === new Date().getFullYear()
-  ) {
-    todayBtn.style.display = "none";
+  if (currentMonth === new Date().getMonth() && currentYear === new Date().getFullYear()) {
+    todayBtn.style.display = 'none';
   } else {
-    todayBtn.style.display = "flex";
+    todayBtn.style.display = 'flex';
   }
 }
