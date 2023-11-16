@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
-    <link rel="stylesheet" href="catat_style.css" />
+    <link rel="stylesheet" href="obrolan_style.css" />
   </head>
   <body>
     <!-- Navbar start -->
@@ -35,7 +35,7 @@
       <div class="sidebar-links">
         <ul>
           <li>
-            <a href="../dash_pemilik/dash_pemilik.html" title="Beranda" class="tooltip">
+            <a href="dash_pemilik.html" title="Beranda" class="tooltip">
               <img src="../img/home.svg" alt="Beranda" />
               <span class="link hide">Beranda</span>
               <span class="tooltip_content">Beranda</span>
@@ -70,10 +70,10 @@
             </a>
           </li>
           <li>
-            <a href="#kalender" title="kalender" class="tooltip">
-              <img src="../img/calendar.svg" alt="kalender" />
-              <span class="link hide">Kalender</span>
-              <span class="tooltip_content">Kalender</span>
+            <a href="#riwayatTransaksi" title="RiwayatTransakasi" class="tooltip">
+              <img src="../img/performance.svg" alt="riwayatTransakasi" />
+              <span class="link hide">Riwayat Transakasi</span>
+              <span class="tooltip_content">Riwayat Transakasi</span>
             </a>
           </li>
           <li>
@@ -84,7 +84,7 @@
             </a>
           </li>
           <li>
-            <a href="../layanan_penghuni/layanan_penghuni.html" title="LayananLuarKost" class="tooltip">
+            <a href="#layananLuarKost" title="LayananLuarKost" class="tooltip">
               <img src="../img/globe.svg" alt="LayananLuarKost" />
               <span class="link hide">Layanan Luar Kost</span>
               <span class="tooltip_content">Layanan Luar Kost</span>
@@ -105,52 +105,24 @@
           </a>
         </div>
         <div class="avatar_icon">
-          <img class="avatar" src="../img/user.jpg"/>
+          <img class="avatar" src="../img/foto-diri.png"/>
+        </div>
+      </div>
+      
+      <div class="chat">
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br>How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
         </div>
       </div>
 
-      <div class="header">
-        <h1>
-          Catatan Tagihan
-        </h1>
-      </div>
-      <div class="table">
-        <table>
-          <div class="caption">
-            <div class="sorting">
-              <img src="../img/arrow-up.svg">
-              <img src="../img/arrow-down.svg">
-              <p>urutkan</p>
-            </div>
-            <input
-                class="search"
-                placeholder=" "
-                spellcheck="false"
-            >
-          </div>
-          <thead>
-            <tr>
-              <th>Nama</th>
-              <th>Status</th>
-              <th>Tagihan</th>
-              <th>Tanggal</th>
-            </tr>
-          </thead>
-          <tbody id="team-member-rows">
-            <!--? rows are generated -->
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="4">
-                <ul class="pagination">
-                  <!--? generated pages -->
-                </ul>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
     </main>
-    <script src="catat_script.js"></script>
+    <script src="obrolan_script.js"></script>
   </body>
 </html>
