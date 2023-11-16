@@ -218,21 +218,8 @@ body.collapsed .tooltip:focus .tooltip_content {
   cursor: pointer;
 }
 
-.chat {
-  background: var(--sidebar-text);
-  padding: 10px 2rem;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* start: Content side */
 .chat-content {
-  background: var(--sidebar-text);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100%;
   position: relative;
 }
@@ -364,7 +351,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   font-size: 12px;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--emerald-500);
+  background-color: var(--blue-600);
   padding: 2px 4px;
   border-radius: 4px;
 }
@@ -533,8 +520,8 @@ body.collapsed .tooltip:focus .tooltip_content {
   margin-right: 32px;
 }
 .conversation-item.me .conversation-item-text {
-  background-color: var(--emerald-500);
-  box-shadow: 0 2px 12px -2px var(--emerald-500);
+  background-color: var(--blue-600);
+  box-shadow: 0 2px 12px -2px var(--blue-600);
   color: rgba(255, 255, 255, .8);
 }
 .conversation-item-time {
@@ -578,12 +565,12 @@ body.collapsed .tooltip:focus .tooltip_content {
   transition: all .15s ease-in-out;
 }
 .conversation-item-dropdown-toggle:hover {
-  background-color: var(--emerald-500);
+  background-color: var(--blue-600);
   color: var(--white);
-  box-shadow: 0 2px 12px -2px var(--emerald-500);
+  box-shadow: 0 2px 12px -2px var(--blue-600);
 }
 .conversation-item-dropdown-toggle:active {
-  background-color: var(--emerald-600);
+  background-color: var(--blue-700);
 }
 .conversation-item-dropdown-list {
   position: absolute;
@@ -721,16 +708,16 @@ body.collapsed .tooltip:focus .tooltip_content {
   color: var(--slate-600);
 }
 .conversation-form-submit {
-  background-color: var(--emerald-500);
-  box-shadow: 0 2px 8px -2px var(--emerald-500);
+  background-color: var(--blue-600);
+  box-shadow: 0 2px 8px -2px var(--blue-600);
   color: var(--white);
 }
 .conversation-form-submit:hover {
-  background-color: var(--emerald-600);
+  background-color: var(--blue-700);
   color: var(--white);
 }
 .conversation-form-submit:active {
-  background-color: var(--emerald-700);
+  background-color: var(--blue-800);
   color: var(--white);
 }
 .conversation-default {
