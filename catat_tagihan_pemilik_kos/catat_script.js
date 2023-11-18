@@ -25,131 +25,134 @@ allLinks.forEach((elem) => {
   })
 });
 
-const daysContainer = document.querySelector(".days"),
-  nextBtn = document.querySelector(".next-btn"),
-  prevBtn = document.querySelector(".prev-btn"),
-  month = document.querySelector(".month"),
-  todayBtn = document.querySelector(".today-btn");
+const teamMembers = [
+  {
+      src: '../img/user.jpg',
+      name: 'Ahmad Faiz Ali Azmi',
+      tagihan: 'Rp. 5.000.000',
+      status: 'lunas',
+      tanggal: '12 November 2023'
+  },
+  {
+      src: '../img/user.jpg',
+      name: 'Salsa Zufar Radinka Akmal',
+      tagihan: 'Rp. 5.000.000',
+      status: 'lunas',
+      tanggal: '12 November 2023'
+  },
+  {
+      src: '../img/user.jpg',
+      name: 'Muhammad Yasin Hakim',
+      tagihan: 'Rp. 5.000.000',
+      status: 'belum',
+      tanggal: '12 November 2023'
+  },
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  {
+      src: '../img/user.jpg',
+      name: 'Fauzan Ghaza Madani',
+      tagihan: 'Rp. 5.000.000',
+      status: 'belum',
+      tanggal: '12 November 2023'
+  },
+  {
+      name: 'Ananda Ravi Kuntadi',
+      src: '../img/user.jpg',
+      tagihan: 'Rp. 5.000.000',
+      status: 'lunas',
+      tanggal: '12 November 2023'
+  },
+  {
+      name: 'Qyan Rommy Mario',
+      src: '../img/user.jpg',
+      tagihan: 'Rp. 5.000.000',
+      status: 'lunas',
+      tanggal: '12 November 2023'
+  },
+  {
+      src: '../img/user.jpg',
+      name: 'Azril Januar Athallah',
+      tagihan: 'Rp. 5.000.000',
+      status: 'belum',
+      tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Haikal Gibran Gunawan',
+    tagihan: 'Rp. 5.000.000',
+    status: 'belum',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Lucas Awan Cahya Buana',
+    tagihan: 'Rp. 5.000.000',
+    status: 'belum',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Jaya Winata',
+    tagihan: 'Rp. 5.000.000',
+    status: 'lunas',
+    tanggal: '12 November 2023'
+  },
+  {
+    src: '../img/user.jpg',
+    name: 'Abyan Rifqi Zainum Muttaqin',
+    tagihan: 'Rp. 5.000.000',
+    status: 'lunas',
+    tanggal: '12 November 2023'
+  },
 ];
 
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let tableBody = document.getElementById('team-member-rows');
 
-// get current date
-const date = new Date();
+const itemsOnPage = 5;
 
-// get current month
-let currentMonth = date.getMonth();
+const numberOfPages = Math.ceil(teamMembers.length / itemsOnPage);
 
-// get current year
-let currentYear = date.getFullYear();
+const start = (new URLSearchParams(window.location.search)).get('page') || 1;
 
-// function to render days
-function renderCalendar() {
-  // get prev month current month and next month days
-  date.setDate(1);
-  const firstDay = new Date(currentYear, currentMonth, 1);
-  const lastDay = new Date(currentYear, currentMonth + 1, 0);
-  const lastDayIndex = lastDay.getDay();
-  const lastDayDate = lastDay.getDate();
-  const prevLastDay = new Date(currentYear, currentMonth, 0);
-  const prevLastDayDate = prevLastDay.getDate();
-  const nextDays = 7 - lastDayIndex - 1;
+const mappedRecords = teamMembers
+.filter((teamMember, i) => (((start - 1) * itemsOnPage) < i + 1) && (i+1 <= start * itemsOnPage))
+.map(
+(teamMember) => {
+  return `<tr>
+      <td class="team-member-profile">
+          <img src="${teamMember.src}" alt="${teamMember.name}">
+          <span class="profile-info">
+              <span class="profile-info__name">
+                  ${teamMember.name}
+              </span>
+          </span>
+      </td>
+      <td>
+          <span class="status status--${teamMember.status}">
+              ${teamMember.status}
+          </span>
+      </td>
+      <td>${teamMember.tagihan}</td>
+      <td>
+          <span class="tanggal">
+              ${teamMember.tanggal}
+          </span>        
+      </td>
+  </tr>`;
+});
 
-  // update current year and month in header
-  month.innerHTML = `${months[currentMonth]} ${currentYear}`;
+tableBody.innerHTML = mappedRecords.join('');
 
-  // update days html
-  let days = "";
+const pagination = document.querySelector('.pagination');
 
-  // prev days html
-  for (let x = firstDay.getDay(); x > 0; x--) {
-    days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
-  }
+const linkList = [];
 
-  // current month days
-  for (let i = 1; i <= lastDayDate; i++) {
-    // check if its today then add today class
-    if (
-      i === new Date().getDate() &&
-      currentMonth === new Date().getMonth() &&
-      currentYear === new Date().getFullYear()
-    ) {
-      // if date month year matches add today
-      days += `<div class="day today">${i}</div>`;
-    } else {
-      //else dont add today
-      days += `<div class="day ">${i}</div>`;
-    }
-  }
+for (let i = 0; i < numberOfPages; i++) {
+  const pageNumber = i + 1;
+  
+  console.log(pageNumber, start)
 
-  // next MOnth days
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="day next">${j}</div>`;
-  }
-
-  // run this function with every calendar render
-  hideTodayBtn();
-  daysContainer.innerHTML = days;
+  linkList.push(`<li><a href="?page=${pageNumber}" ${pageNumber == start ? 'class="active"' : ''} title="page ${pageNumber}">${pageNumber}</a></li>`);
 }
 
-renderCalendar();
-
-nextBtn.addEventListener("click", () => {
-  // increase current month by one
-  currentMonth++;
-  if (currentMonth > 11) {
-    // if month gets greater that 11 make it 0 and increase year by one
-    currentMonth = 0;
-    currentYear++;
-  }
-  // rerender calendar
-  renderCalendar();
-});
-
-// prev monyh btn
-prevBtn.addEventListener("click", () => {
-  // increase by one
-  currentMonth--;
-  // check if let than 0 then make it 11 and deacrease year
-  if (currentMonth < 0) {
-    currentMonth = 11;
-    currentYear--;
-  }
-  renderCalendar();
-});
-
-// go to today
-todayBtn.addEventListener("click", () => {
-  // set month and year to current
-  currentMonth = date.getMonth();
-  currentYear = date.getFullYear();
-  // rerender calendar
-  renderCalendar();
-});
-
-// lets hide today btn if its already current month and vice versa
-
-function hideTodayBtn() {
-  if (
-    currentMonth === new Date().getMonth() &&
-    currentYear === new Date().getFullYear()
-  ) {
-    todayBtn.style.display = "none";
-  } else {
-    todayBtn.style.display = "flex";
-  }
-}
+pagination.innerHTML = linkList.join('');
