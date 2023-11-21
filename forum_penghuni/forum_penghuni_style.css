@@ -218,7 +218,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   cursor: pointer;
 }
 
-/* .content-satu {
+.content-satu {
   display: flex;
   background: var(--sidebar-text);
   padding: 10px 2rem;
@@ -227,4 +227,80 @@ body.collapsed .tooltip:focus .tooltip_content {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   align-items: center;
-} */
+}
+
+.forum-kiri {
+  flex: 1;
+  padding: 10px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.forum-kiri button{
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  padding: 0px 50px ;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.forum-kanan {
+  flex: 3;
+  padding: 10px;
+}
+
+.menu {
+  margin-top: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.menu ul{
+  list-style-type: none;
+  position: relative;
+}
+
+.menu li {
+  position: relative;
+}
+
+.icon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.icon img {
+  width: 10%;
+}
+
+
+.list-kata-kunci {
+  margin-top: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.list-kata-kunci h3 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.kategori {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 7px;
+  font-size: .8rem;
+  background-color: #cbd5e1;
+  color: #334155;
+  margin-bottom: 5px;
+}

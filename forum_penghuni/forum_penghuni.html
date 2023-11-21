@@ -94,26 +94,68 @@
           <button type="submit" class="mulai-diskusi-baru">Mulai diskusi baru</button>
 
           <div class="menu">
-            <div class="semua-diskusi">
-              <img src="../img/wechat-line.svg" alt="semua-diskusi" />
-              <span class="link hide">Semua diskusi</span>
-            </div>
-            <div class="kata-kunci">
-              <img src="../img/price-tag-line.svg" alt="kata-kunci" />
-              <span class="link hide">Kata kunci</span>
-            </div>
+            <ul>
+              <li>
+                <div class="icon semua-diskusi">
+                  <img src="../img/wechat-line.svg" alt="semua-diskusi" />
+                  <span class="link hide">Semua diskusi</span>
+                </div>
+              </li>
+              <li>
+                <div class="icon kata-kunci">
+                  <img src="../img/price-tag-line.svg" alt="kata-kunci" />
+                  <span class="link hide">Kata kunci</span>
+                </div>
+              </li>
+            </ul>
           </div>
 
           <div class="list-kata-kunci">
-            <h2>Kategori</h2>
-            <span class="kategori kategori--satu"> #kategori_satu </span>
-            <span class="kategori kategori--dua"> #kategori_dua </span>
-            <span class="kategori kategori--tiga"> #kategori_tiga </span>
-            <span class="kategori kategori--empat"> #kategori_empat </span>
+            <h3>Kategori</h3>
+            <p class="kategori kategori--satu"> #kategori_satu </p>
+            <p class="kategori kategori--dua"> #kategori_dua </p>
+            <p class="kategori kategori--tiga"> #kategori_tiga </p>
+            <p class="kategori kategori--empat"> #kategori_empat </p>
           </div>
         </div>
         <div class="forum-kanan">
 
+          <div class="table">
+            <table>
+              <div class="caption">
+                <div class="sorting">
+                  <img src="../img/arrow-up.svg">
+                  <img src="../img/arrow-down.svg">
+                  <p>urutkan</p>
+                </div>
+                <input
+                    class="search"
+                    placeholder=" "
+                    spellcheck="false"
+                >
+              </div>
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Status</th>
+                  <th>Tagihan</th>
+                  <th>Tanggal</th>
+                </tr>
+              </thead>
+              <tbody id="team-member-rows">
+                <!--? rows are generated -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">
+                    <ul class="pagination">
+                      <!--? generated pages -->
+                    </ul>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
           
         </div>
       </div>
