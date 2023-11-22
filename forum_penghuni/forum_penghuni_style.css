@@ -225,8 +225,6 @@ body.collapsed .tooltip:focus .tooltip_content {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
-  align-items: center;
 }
 
 .forum-kiri {
@@ -241,6 +239,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   background: var(--primary-color);
   color: white;
   padding: 0px 50px ;
+  margin-top: 4px;
   border-radius: 5px;
   text-align: center;
   font-size: 1.1rem;
@@ -376,4 +375,60 @@ body.collapsed .tooltip:focus .tooltip_content {
 
 .content-restart {
   color: var(--slate-400);
+}
+
+.record {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-color);
+  height: 64px;
+  opacity: 1;
+  padding: 16px 0px;
+  margin: 7px;
+  animation: fadein 0.3s ease-in-out;
+}
+
+.record .avatar-img {
+  display: block;
+  border-radius: 16px;
+  flex-grow: 0;
+  height: 64px;
+  width: 64px;
+  border: 1px solid var(--tab-background);
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 16px;
+  align-items: center;
+}
+
+.content .title {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.content .description {
+  font-size: smaller;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-gray);
+}
+
+.explore-button {
+  margin-left: auto;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  height: fit-content;
+  padding: 6px 8px;
 }
