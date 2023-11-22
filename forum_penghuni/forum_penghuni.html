@@ -20,6 +20,7 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="forum_penghuni_style.css" />
+    <link rel="stylesheet" href="color_pallete.css" />
   </head>
   <body>
     <!-- Navbar start -->
@@ -119,44 +120,15 @@
           </div>
         </div>
         <div class="forum-kanan">
-
-          <div class="table">
-            <table>
-              <div class="caption">
-                <div class="sorting">
-                  <img src="../img/arrow-up.svg">
-                  <img src="../img/arrow-down.svg">
-                  <p>urutkan</p>
-                </div>
-                <input
-                    class="search"
-                    placeholder=" "
-                    spellcheck="false"
-                >
-              </div>
-              <thead>
-                <tr>
-                  <th>Nama</th>
-                  <th>Status</th>
-                  <th>Tagihan</th>
-                  <th>Tanggal</th>
-                </tr>
-              </thead>
-              <tbody id="team-member-rows">
-                <!--? rows are generated -->
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colspan="4">
-                    <ul class="pagination">
-                      <!--? generated pages -->
-                    </ul>
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+          <div class="nav-top">
+            <form action="" class="content-form1">
+              <input type="search" class="content-input" placeholder="Cari judul diskusi">
+              <button type="submit" class="content-search"><i class="ri-search-line"></i></button>
+            </form>
+            <form class="content-form2">
+              <button type="submit" class="content-restart"><i class="ri-restart-line"></i></button>
+            </form>
           </div>
-          
         </div>
       </div>
     </main>

@@ -241,7 +241,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   background: var(--primary-color);
   color: white;
   padding: 0px 50px ;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   font-size: 1.1rem;
   height: 40px;
@@ -257,7 +257,7 @@ body.collapsed .tooltip:focus .tooltip_content {
 .menu {
   margin-top: 1rem;
   border: 2px solid #d1d5db;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px;
 }
 
@@ -274,7 +274,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   font-size: 1.1rem;
 }
 
@@ -286,7 +286,7 @@ body.collapsed .tooltip:focus .tooltip_content {
 .list-kata-kunci {
   margin-top: 1rem;
   border: 2px solid #d1d5db;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px;
 }
 
@@ -297,10 +297,83 @@ body.collapsed .tooltip:focus .tooltip_content {
 
 .kategori {
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 7px;
   font-size: .8rem;
-  background-color: #cbd5e1;
-  color: #334155;
+  background-color: var(--slate-100);
+  border: 2px solid var(--slate-500);
+  color: var(--slate-500);
   margin-bottom: 5px;
+  font-weight: 510;
+}
+
+.nav-top {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.content-form1 {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative;
+  padding: 5px;
+}
+
+.content-form2 {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative;
+  padding: 5px;
+}
+
+.content-input {
+  padding: 8px 16px;
+  background-color: var(--slate-100);
+  border: 1px solid var(--slate-300);
+  outline: none;
+  width: 100%;
+  border-radius: 5px;
+  padding-right: 32px;
+  font-size: 14px;
+}
+
+.content-input:focus {
+  border-color: var(--slate-400);
+}
+
+.content-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  color: var(--slate-400);
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+}
+
+.content-restart {
+  padding: 8px 16px; /* Adjust padding for buttons */
+  background-color: var(--slate-100);
+  outline: none;
+  border: 1px solid var(--slate-300);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+}
+
+.content-search:hover,
+.content-restart:hover {
+  background-color: var(--slate-200);
+}
+
+.content-search {
+  color: var(--slate-400);
+}
+
+.content-restart {
+  color: var(--slate-400);
 }
