@@ -225,116 +225,168 @@ body.collapsed .tooltip:focus .tooltip_content {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
+}
+
+.forum-kanan {
+  flex: 3;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  margin-top: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.menu ul{
+  list-style-type: none;
+  position: relative;
+}
+
+.menu li {
+  position: relative;
+}
+
+.icon {
+  display: flex;
+  justify-content: start;
   align-items: center;
+  gap: 20px;
+  font-size: 1.1rem;
 }
 
-.content-satu img {
-  width: 15%;
+.icon img {
+  width: 10%;
 }
 
-.content-satu h1 {
-  font-size: 1.5rem;
+
+.list-kata-kunci {
+  margin-top: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.list-kata-kunci h3 {
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 
-.content-satu p {
-  font-size: 1rem;
+.kategori {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: .8rem;
+  background-color: var(--slate-100);
+  border: 2px solid var(--slate-500);
+  color: var(--slate-500);
+  margin-bottom: 5px;
+  font-weight: 510;
 }
 
-/* Kalender */
-.content-dua {
+.nav-top {
   display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.content-form1 {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative;
+  padding: 5px;
+}
+
+.content-form2 {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative;
+  padding: 5px;
+}
+
+.content-input {
+  padding: 8px 16px;
+  background-color: var(--slate-100);
+  border: 1px solid var(--slate-300);
+  outline: none;
+  width: 100%;
+  border-radius: 5px;
+  padding-right: 32px;
+  font-size: 14px;
+}
+
+.content-input:focus {
+  border-color: var(--slate-400);
+}
+
+.forum-kanan .Tambah{
+  justify-content: flex-end;
+}
+
+
+.record {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
-  display: flex;
-  background: var(--sidebar-text);
-  padding: 10px 2rem;
-  margin: 10px;
+  gap: 12px;
+  color: var(--primary-color);
+  height: 64px;
+  opacity: 1;
+  padding: 16px 0px;
+  margin: 7px;
+  animation: fadein 0.3s ease-in-out;
+  background-color: var(--sky-200);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.calendar {
-  width: 100%;
-  max-width: 600px;
-  padding: 30px 20px;
-  border-radius: 10px;
-}
-.calendar .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #ccc;
-}
-.calendar .header .month {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-  font-weight: 600;
-}
-.calendar .header .btns {
-  display: flex;
-  gap: 10px;
-}
-.calendar .header .btns .btn {
-  width: 50px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.calendar .header .btns .btn:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
-}
-.weekdays {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.weekdays .day {
-  width: calc(100% / 7 - 10px);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-}
-.days {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.days .day {
-  width: calc(100% / 7 - 10px);
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text-color);
-  transition: all 0.3s;
-}
-.days .day:not(.next):not(.prev):hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
-}
-.days .day.today {
-  color: #fff;
-  background-color: var(--primary-color);
-}
-.days .day.next,
-.days .day.prev {
-  color: #ccc;
+
+.record .kamar{
+  padding: 20px;
 }
 
-.tabel{
-  background-color: var(--sidebar-text);
+.record .avatar-img {
+  display: block;
+  border-radius: 16px;
+  flex-grow: 0;
+  height: 64px;
+  width: 64px;
+  border: 1px solid var(--tab-background);
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 16px;
+  align-items: center;
+}
+
+.content .title {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.content .description {
+  font-weight: 700;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-gray);
+}
+
+.explore-button {
+  margin-left: auto;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  height: fit-content;
+  padding: 6px 8px;
 }
