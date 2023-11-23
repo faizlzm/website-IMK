@@ -60,5 +60,23 @@ document.getElementById('pesanButton').addEventListener('click', function () {
   }
 });
 
+document.getElementById('pesanButtonLaundry').addEventListener('click', function () {
+  var jenisLayanan = document.getElementById('jenis_layanan').value;
+
+  if (jenisLayanan === 'Pesanan Galon') {
+      // Tampilkan pop-up konfirmasi sesuai dengan pesanan galon
+      var jenisGalon = document.querySelector('.jenis_galon').value;
+      var jumlahGalon = document.querySelector('.jumlah_galon').value;
+      alert("Anda memesan galon " + jenisGalon + " sebanyak " + jumlahGalon);
+  } else if (jenisLayanan === 'Pesanan Laundry') {
+      // Tampilkan pop-up konfirmasi sesuai dengan pesanan laundry
+      var berapaHari = document.querySelector('.berapa_hari').value;
+      var jenisLayananLaundry = document.querySelector('.jenis_layanan_laundry').value;
+      alert("Anda memesan laundry untuk " + berapaHari + " hari dengan jenis layanan " + jenisLayananLaundry);
+  } else {
+      alert("Pilih jenis layanan terlebih dahulu.");
+  }
+});
+
 
 
