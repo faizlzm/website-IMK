@@ -322,10 +322,42 @@ body.collapsed .tooltip:focus .tooltip_content {
   border-color: var(--slate-400);
 }
 
-.forum-kanan .Tambah{
-  justify-content: flex-end;
+.content-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  color: var(--slate-400);
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
 }
 
+.content-add {
+  padding: 8px 16px; /* Adjust padding for buttons */
+  background-color: var(--slate-100);
+  outline: none;
+  border: 1px solid var(--slate-300);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+}
+
+.forum-kanan .Tambah{
+  width: 75px;
+  gap: 18px;
+  flex-direction: column;
+  justify-content: flex-end;
+ 
+}
+
+.daftar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .record {
   display: flex;
@@ -334,7 +366,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   align-items: center;
   gap: 12px;
   color: var(--primary-color);
-  height: 64px;
+  height: auto;
   opacity: 1;
   padding: 16px 0px;
   margin: 7px;
@@ -342,6 +374,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   background-color: var(--sky-200);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
 }
 
 .record .kamar{
@@ -364,16 +397,17 @@ body.collapsed .tooltip:focus .tooltip_content {
   flex-grow: 1;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .content .title {
-  font-weight: 700;
+  font-size: 1rem;
   color: var(--primary-color);
   margin-bottom: 10px;
 }
 
 .content .description {
-  font-weight: 700;
+  font-size: 1rem;
 }
 
 .title-description {
@@ -382,11 +416,35 @@ body.collapsed .tooltip:focus .tooltip_content {
   color: var(--blue-gray);
 }
 
-.explore-button {
+.edit-button {
   margin-left: auto;
+  margin-right: 30px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   border-radius: 8px;
   height: fit-content;
   padding: 6px 8px;
+  
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+}
+
+.pagination a {
+  display: block;
+  color: var(--text);
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.pagination a:hover, a.active{
+  background-color: var(--odd-row);
+  text-decoration: underline;
 }
