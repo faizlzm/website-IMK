@@ -1,6 +1,4 @@
-
 const expand_btn = document.querySelector(".expand-btn");
-
 let activeIndex;
 
 expand_btn.addEventListener("click", () => {
@@ -22,7 +20,7 @@ allLinks.forEach((elem) => {
         link.classList.remove('active');
       }
     });
-  })
+  });
 });
 
 const teamMembers = [
@@ -85,13 +83,21 @@ const itemsOnPage = 5;
 
 const numberOfPages = Math.ceil(teamMembers.length / itemsOnPage);
 
-const start = (new URLSearchParams(window.location.search)).get('page') || 1;
+// Move 'start' definition to a higher scope
+let start = (new URLSearchParams(window.location.search)).get('page') || 1;
 
-const mappedRecords = teamMembers.filter((teamMember, i) => (((start - 1) * itemsOnPage) < i + 1) && (i+1 <= start * itemsOnPage))
-.map((teamMember, i) => {
-  return `
-  <div class="record">      
-        <div class="content">
+const handleCheckboxChange = (index) => {
+  alert(`Pesanan ${teamMembers[index].name} telah dikonfirmasi`);
+  teamMembers.splice(index, 1);
+  renderTable();
+};
+
+const renderTable = () => {
+  const mappedRecords = teamMembers.filter((teamMember, i) => (((start - 1) * itemsOnPage) < i + 1) && (i + 1 <= start * itemsOnPage))
+    .map((teamMember, i) => {
+      return `
+        <div class="record">      
+          <div class="content">
             <div class="title-description">
               <div class="title">
                  Nama Pemesan: ${teamMember.name}
@@ -107,14 +113,17 @@ const mappedRecords = teamMembers.filter((teamMember, i) => (((start - 1) * item
               Detail Pesanan
             </span>
             <div class="edit-button" title="Edit">
-              <input type="checkbox" id="editCheckbox${i}" />
+              <input type="checkbox" id="editCheckbox${i}" onchange="handleCheckboxChange(${i})" />
             </div>          
           </div>
-  </div>
-`;
-});
+        </div>
+      `;
+    });
 
-tableBody.innerHTML = mappedRecords.join('');
+  tableBody.innerHTML = mappedRecords.join('');
+};
+
+renderTable();
 
 const pagination = document.querySelector('.pagination');
 
