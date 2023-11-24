@@ -16,9 +16,12 @@
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- My Style -->
-    <link rel="stylesheet" href="dash_pemilik_style.css" />
+    <link rel="stylesheet" href="layanan_pemilik_style.css" />
+    <link rel="stylesheet" href="color_pallete.css" />
+
   </head>
   <body>
     <!-- Navbar start -->
@@ -35,7 +38,7 @@
       <div class="sidebar-links">
         <ul>
           <li>
-            <a href="#Beranda" title="Beranda" class="tooltip">
+            <a href="../dash_pemilik/dash_pemilik.html" title="Beranda" class="tooltip">
               <img src="../img/home.svg" alt="Beranda" />
               <span class="link hide">Beranda</span>
               <span class="tooltip_content">Beranda</span>
@@ -109,47 +112,39 @@
         </div>
       </div>
 
-      <div class="content-satu">
-        <div class="header">
-          <h1>Hello, Nama Pemilik Kost</h1>
-          <p>Selamat datang kembali!</p>
-        </div>
-        <img src="../img/dashboard_6188222.png" alt="" />
+      <div class="header">
+        <h1>Pesanan Masuk</h1>
       </div>
 
-      <div class="content-dua">
-        <div class="calendar">
-          <div class="header">
-            <div class="month"></div>
-            <div class="btns">
-              <div class="btn today-btn">
-                <img src="../img/calendar.svg" class="fas fa-calendar-day"></img>
-              </div>
-              <div class="btn prev-btn">
-                <img src="../img/chevron-left.svg" class="fas fa-chevron-left"></img>
-              </div>
-              <div class="btn next-btn">
-                <img src="../img/chevron-right.svg" class="fas fa-chevron-right"></img>
-              </div>
-            </div>
+      <div class="content-satu">
+        <div class="forum-kanan">
+          <div class="nav-top">
+            <form action="" class="content-form1">
+              <input type="search" class="content-input" placeholder="Cari Nama Penghuni">
+              <button type="submit" class="content-search"><i class="ri-search-line"></i></button>
+            </form>
+            <!-- <form class="content-form2">
+              <button type="submit" class="content-add"><i class="ri-add-line"></i></button>
+            </form> -->
           </div>
-          <div class="weekdays">
-            <div class="day">Min</div>
-            <div class="day">Sen</div>
-            <div class="day">Sel</div>
-            <div class="day">Rab</div>
-            <div class="day">Kam</div>
-            <div class="day">Jum</div>
-            <div class="day">Sab</div>
+
+          <div class="daftar">
+          <!-- rows are generated -->
           </div>
-          <div class="days">
-            <!-- lets add days using js -->
+
+          <div>
+              <td colspan="4">
+                <ul class="pagination">
+                  <!--? generated pages -->
+                </ul>
+              </td>
+              
           </div>
-        </div>
+          
+
+        </div> 
       </div>
-      
-      <div class="tabel"></div>
     </main>
-    <script src="dash_pemilik_script.js"></script>
+    <script src="layanan_pemilik_script.js"></script>
   </body>
 </html>
