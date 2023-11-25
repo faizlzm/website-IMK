@@ -83,8 +83,3 @@ document.getElementById('pesanButtonLaundry').addEventListener('click', function
     alert("Pilih jenis layanan terlebih dahulu.");
   }
 });
-
-
-
-
-
