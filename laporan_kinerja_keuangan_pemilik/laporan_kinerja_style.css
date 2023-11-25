@@ -2,6 +2,10 @@
   --primary-color: #243763;
   --secondary-color: #ff6e31;
   --sidebar-text: #f8f7fd;
+  --color-primary: #243763;
+  --color-label: #a7a7a7;
+  --color-default: #e2dede;
+  --font-family: "Montserrat";
 }
 
 html {
@@ -303,16 +307,45 @@ body.collapsed .tooltip:focus .tooltip_content {
   font-size: 1rem;
 }
 
-.chart-container {
-  width: 300px;
-  margin: 20px auto;
+.laporan-pilihan div {
+  display: none;
 }
 
-.bar {
-  display: inline-block;
-  width: 30px;
-  margin-right: 10px;
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
+.laporan-pilihan div.active {
+  display: block;
+}
+
+.dynamic-div {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* grafik */
+.card {
+  background: #ffffff;
+  width: 50%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.08);
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light {
+  color: var(--color-text);
+  background: #ffffff;
+  box-shadow: none;
+  border: 1px solid #e7e7e7;
+  /* border: 0; */
+  padding: 8px;
+  /* opacity: 1 !important; */
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  display: none;
+}
+
+body
+  .apexcharts-xaxistooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light {
+  display: none;
 }

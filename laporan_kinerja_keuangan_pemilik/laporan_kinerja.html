@@ -128,20 +128,31 @@
       </div>
 
       <div class="content-dua">
-        <div class="pilihan_laporan">
-        </div>
+        <div class="pilihan_laporan"></div>
         <select class="jenis_laporan" name="jenis_laporan" id="jenis_laporan">
           <option value="" selected disabled>Pilih Laporan yang Ingin Dilihat</option>
           <option value="Laporan_1">Laporan 1</option>
           <option value="Laporan_2">Laporan 2</option>
         </select>
         <div class="laporan-pilihan">
-          
+          <div id="Laporan_1" class="dynamic-div">
+            <div class="card">
+              <h2>User Growth</h2>
+              <h3>Year on year comparison</h3>
+              <div id="bar-chart"></div>
+            </div>
+          </div>
+          <div id="Laporan_2" class="dynamic-div">
+            <h1>LAPORAN 2</h1>
+          </div>
         </div>
-      </div>
+        
 
+      </div>
+      
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="laporan_kinerja_script.js"></script>
   </body>
 </html>
