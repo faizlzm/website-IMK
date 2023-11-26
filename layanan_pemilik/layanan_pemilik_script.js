@@ -99,20 +99,20 @@ const renderTable = () => {
         <div class="record">      
           <div class="content">
             <div class="title-description">
-              <div class="title">
-                 Nama Pemesan: ${teamMember.name}
+              <div class="Hdescription">
+                 Nama Pemesan\t: ${teamMember.name}
               </div>
               <div class="description">
-                Kamar: ${teamMember.kamar}
+                Kamar          : ${teamMember.kamar}
               </div>
               <div class="description">
-                Pesanan: ${teamMember.pesanan}
+                Pesanan\t: ${teamMember.pesanan}
               </div>
             </div>
-            <span href="#explore-more" class="detail-button" title="Detail">
-              Detail Pesanan
-            </span>
             <div class="edit-button" title="Edit">
+              <span href="#explore-more" class="detail-button" title="Detail">
+                Detail Pesanan
+              </span>
               <input type="checkbox" id="editCheckbox${i}" onchange="handleCheckboxChange(${i})" />
             </div>          
           </div>

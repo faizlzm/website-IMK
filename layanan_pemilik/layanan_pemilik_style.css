@@ -275,18 +275,6 @@ body.collapsed .tooltip:focus .tooltip_content {
   margin-bottom: 10px;
 }
 
-.kategori {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: .8rem;
-  background-color: var(--slate-100);
-  border: 2px solid var(--slate-500);
-  color: var(--slate-500);
-  margin-bottom: 5px;
-  font-weight: 510;
-}
-
 .nav-top {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -411,6 +399,11 @@ body.collapsed .tooltip:focus .tooltip_content {
   font-size: 1rem;
 }
 
+.content .Hdescription {
+  font-size: 1rem;
+  font-weight: 550;
+}
+
 .title-description {
   display: flex;
   flex-direction: column;
@@ -489,9 +482,7 @@ body.collapsed .tooltip:focus .tooltip_content {
   vertical-align: middle; /* Align the label vertically in the middle */
 }
 
-.detail-button {
-  margin-left: auto;
-  margin-right: 0.1%;
+.detail-button { 
   color: var(--primary-color);
   height: fit-content;
   padding: 6px 8px;
