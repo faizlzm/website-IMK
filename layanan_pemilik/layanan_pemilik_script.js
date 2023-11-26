@@ -99,7 +99,7 @@ const renderTable = () => {
         <div class="record">      
           <div class="content">
             <div class="title-description">
-              <div class="title">
+              <div class="description">
                  Nama Pemesan: ${teamMember.name}
               </div>
               <div class="description">

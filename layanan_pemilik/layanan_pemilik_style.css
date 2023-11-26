@@ -491,9 +491,10 @@ body.collapsed .tooltip:focus .tooltip_content {
 
 .detail-button {
   margin-left: auto;
-  margin-right: 0.1%;
+  margin-right: auto;
   color: var(--primary-color);
   height: fit-content;
   padding: 6px 8px;
   cursor: pointer;
+  vertical-align: middle;
 }
